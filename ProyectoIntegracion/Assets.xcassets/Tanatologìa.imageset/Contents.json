@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Contacto.png",
+      "filename" : "Mod1_Tanatologia.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Contacto-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Contacto-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
