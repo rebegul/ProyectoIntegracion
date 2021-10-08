@@ -21,6 +21,7 @@
 		B80F0F12270FF6DC0013685A /* ExpedienteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80F0F11270FF6DC0013685A /* ExpedienteTableViewController.swift */; };
 		B80F0F14270FF7060013685A /* SesionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80F0F13270FF7060013685A /* SesionesTableViewController.swift */; };
 		B80F0F16270FF76D0013685A /* SesionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80F0F15270FF76D0013685A /* SesionTableViewController.swift */; };
+		B80F0F18271001B30013685A /* EncuadreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80F0F17271001B30013685A /* EncuadreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B80F0F11270FF6DC0013685A /* ExpedienteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedienteTableViewController.swift; sourceTree = "<group>"; };
 		B80F0F13270FF7060013685A /* SesionesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionesTableViewController.swift; sourceTree = "<group>"; };
 		B80F0F15270FF76D0013685A /* SesionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionTableViewController.swift; sourceTree = "<group>"; };
+		B80F0F17271001B30013685A /* EncuadreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuadreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				B80F0F11270FF6DC0013685A /* ExpedienteTableViewController.swift */,
 				B80F0F13270FF7060013685A /* SesionesTableViewController.swift */,
 				B80F0F15270FF76D0013685A /* SesionTableViewController.swift */,
+				B80F0F17271001B30013685A /* EncuadreTableViewController.swift */,
 			);
 			path = Controladores;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				B80F0EF3270FCBF10013685A /* AppDelegate.swift in Sources */,
 				B80F0F14270FF7060013685A /* SesionesTableViewController.swift in Sources */,
 				B80F0EF5270FCBF20013685A /* SceneDelegate.swift in Sources */,
+				B80F0F18271001B30013685A /* EncuadreTableViewController.swift in Sources */,
 				B80F0F0A270FEA850013685A /* HolisticoTableViewController.swift in Sources */,
 				B80F0F0E270FEAB40013685A /* AcompanamientoTableViewController.swift in Sources */,
 				B80F0F16270FF76D0013685A /* SesionTableViewController.swift in Sources */,
