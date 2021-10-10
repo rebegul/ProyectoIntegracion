@@ -1,19 +1,18 @@
 //
-//  SesionTableViewController.swift
+//  SesionViewController.swift
 //  ProyectoIntegracion
 //
-//  Created by Rebeca Guevara on 07/10/21.
+//  Created by Rebeca Guevara on 09/10/21.
 //
 
 import UIKit
 
 class SesionViewController: UIViewController {
 
+    @IBOutlet weak var Motivo: MotivoPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
-        navigationItem.title = "Sesiones"
-        navigationController?.navigationBar.prefersLargeTitles = true
+
         // Do any additional setup after loading the view.
     }
     
