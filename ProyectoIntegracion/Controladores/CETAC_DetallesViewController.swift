@@ -13,11 +13,18 @@ class CETAC_DetallesViewController: UIViewController {
     @IBOutlet weak var nombreinformacion: UILabel!
     
     @IBOutlet weak var descInfo: UILabel!
+    
+    
+    
+    @IBOutlet weak var imagen: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nombreinformacion.text = informacion?.nombre
         descInfo.text = informacion?.desc
+        
+        imagen.image = UIImage(named: informacion!.imagen)
 
         // Do any additional setup after loading the view.
     }

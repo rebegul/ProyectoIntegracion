@@ -1819,6 +1819,10 @@ EENvbnRyYXNlw7FhA
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-Cw-br2">
+                                <rect key="frame" x="40" y="831" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mv8-M2-mZu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1859,6 +1863,10 @@ EENvbnRyYXNlw7FhA
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EuM-9E-jDJ">
+                                <rect key="frame" x="203" y="819" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wra-Pg-U43"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1866,6 +1874,7 @@ EENvbnRyYXNlw7FhA
                     <navigationItem key="navigationItem" id="yrY-P7-DO4"/>
                     <connections>
                         <outlet property="descInfo" destination="tep-P7-hTd" id="1mo-dv-NST"/>
+                        <outlet property="imagen" destination="EuM-9E-jDJ" id="PpH-l5-bHp"/>
                         <outlet property="nombreinformacion" destination="6RA-VI-8K1" id="Kd9-80-XBw"/>
                     </connections>
                 </viewController>
@@ -3082,7 +3091,6 @@ EENvbnRyYXNlw7FhA
         <!--Table View Controller-->
         <scene sceneID="6t5-2o-TMx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kYe-sD-pVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="2Y3-Fu-ICg" customClass="CETACTableViewController" customModule="ProyectoIntegracion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="A8W-PM-lEW">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
@@ -3113,13 +3121,13 @@ EENvbnRyYXNlw7FhA
                     </tableView>
                     <navigationItem key="navigationItem" id="0mV-vz-DVM"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYe-sD-pVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-814" y="2484"/>
         </scene>
         <!--Acompanamiento Table View Controller-->
         <scene sceneID="Hri-on-N0Q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3cu-FI-a47" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="GRf-BE-ndH" customClass="AcompanamientoTableViewController" customModule="ProyectoIntegracion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lFe-td-f2x">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
@@ -3145,13 +3153,13 @@ EENvbnRyYXNlw7FhA
                     </tableView>
                     <navigationItem key="navigationItem" id="3Xl-51-ARp"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cu-FI-a47" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-108" y="2484"/>
         </scene>
         <!--Alternativas Table View Controller-->
         <scene sceneID="zxj-P4-p5a">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j9f-iR-CgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="TmN-ve-94R" customClass="AlternativasTableViewController" customModule="ProyectoIntegracion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kcF-Kp-hzX">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
@@ -3177,6 +3185,7 @@ EENvbnRyYXNlw7FhA
                     </tableView>
                     <navigationItem key="navigationItem" id="GM9-a7-JGM"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9f-iR-CgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2085" y="2484"/>
         </scene>
