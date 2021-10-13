@@ -8,12 +8,13 @@
 import UIKit
 
 class HolisticoTableViewController: UITableViewController {
-    let datos = ["Aromaterapia", "Cristaloterapia", "Reiki", "Biomagnetismo", "Angeloterapia","Musicoterapia", "Cama Térmica de Jade"]
+    let datos = Holistico.listaHolistico()
 
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Sercicios Holisticos"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,12 +41,20 @@ class HolisticoTableViewController: UITableViewController {
         //let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = datos[indexPath.row]
+        cell.textLabel?.text = datos[indexPath.row].nombre
         //cell.textLabel?.text = contacts[indexPath.row].fullname
 
         return cell
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let siguiente = segue.destination as! Holistico_DetallesViewController
+        let indice = self.tableView.indexPathForSelectedRow?.row
+        siguiente.holistico = datos[indice!]
+    }
 
     /*
     // Override to support conditional editing of the table view.

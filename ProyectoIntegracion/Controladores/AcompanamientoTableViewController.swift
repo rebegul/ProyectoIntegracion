@@ -9,10 +9,12 @@ import UIKit
 
 class AcompanamientoTableViewController: UITableViewController {
     
-    let datos = ["Tanatologia", "Acompañamiento Individual", "Acompañamiento Grupal", "Logoterapia", "Mindfulness"]
+    let datos = Acompa.listaAcompa()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Sercicios de Acompañamiento"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,9 +39,17 @@ class AcompanamientoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "acompanamiento", for: indexPath)
 
-        cell.textLabel?.text = datos[indexPath.row]
+        cell.textLabel?.text = datos[indexPath.row].nombre
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let siguiente = segue.destination as! Acompa_DetallesViewController
+        let indice = self.tableView.indexPathForSelectedRow?.row
+        siguiente.acompa = datos[indice!]
     }
     
 

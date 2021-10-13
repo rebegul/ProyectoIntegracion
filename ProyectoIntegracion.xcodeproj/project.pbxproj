@@ -28,9 +28,17 @@
 		B8BBC7DF27126FD10042B08A /* AdminCambiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7DE27126FD10042B08A /* AdminCambiosViewController.swift */; };
 		B8BBC7E12712732B0042B08A /* TanatolCambioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7E02712732B0042B08A /* TanatolCambioViewController.swift */; };
 		B8BBC7E3271280760042B08A /* UsuarioCambioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7E2271280760042B08A /* UsuarioCambioViewController.swift */; };
+		B8BBC7E5271297DD0042B08A /* VistaSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7E4271297DD0042B08A /* VistaSesionViewController.swift */; };
+		B8BBC7E727129AD80042B08A /* CambioSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7E627129AD80042B08A /* CambioSesionViewController.swift */; };
 		B8CDEDCC27120D9E00AD7DC1 /* MotivoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDEDCB27120D9E00AD7DC1 /* MotivoPickerView.swift */; };
 		B8CDEDCE27120F4800AD7DC1 /* SesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDEDCD27120F4800AD7DC1 /* SesionViewController.swift */; };
 		B8CDEDD0271211E800AD7DC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8CDEDCF271211E800AD7DC1 /* GoogleService-Info.plist */; };
+		B8CE411C271650CE00D51DBD /* CETAC_DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE411B271650CE00D51DBD /* CETAC_DetallesViewController.swift */; };
+		B8CE411E2716513C00D51DBD /* Informacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE411D2716513C00D51DBD /* Informacion.swift */; };
+		B8CE4120271654EE00D51DBD /* Holistico_DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE411F271654EE00D51DBD /* Holistico_DetallesViewController.swift */; };
+		B8CE4122271654FC00D51DBD /* Holistico.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE4121271654FC00D51DBD /* Holistico.swift */; };
+		B8CE4126271658FA00D51DBD /* Acompa.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE4125271658FA00D51DBD /* Acompa.swift */; };
+		B8CE412827165A4600D51DBD /* Acompa_DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE412727165A4600D51DBD /* Acompa_DetallesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +66,17 @@
 		B8BBC7DE27126FD10042B08A /* AdminCambiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCambiosViewController.swift; sourceTree = "<group>"; };
 		B8BBC7E02712732B0042B08A /* TanatolCambioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanatolCambioViewController.swift; sourceTree = "<group>"; };
 		B8BBC7E2271280760042B08A /* UsuarioCambioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioCambioViewController.swift; sourceTree = "<group>"; };
+		B8BBC7E4271297DD0042B08A /* VistaSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaSesionViewController.swift; sourceTree = "<group>"; };
+		B8BBC7E627129AD80042B08A /* CambioSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambioSesionViewController.swift; sourceTree = "<group>"; };
 		B8CDEDCB27120D9E00AD7DC1 /* MotivoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivoPickerView.swift; sourceTree = "<group>"; };
 		B8CDEDCD27120F4800AD7DC1 /* SesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionViewController.swift; sourceTree = "<group>"; };
 		B8CDEDCF271211E800AD7DC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8CE411B271650CE00D51DBD /* CETAC_DetallesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CETAC_DetallesViewController.swift; sourceTree = "<group>"; };
+		B8CE411D2716513C00D51DBD /* Informacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informacion.swift; sourceTree = "<group>"; };
+		B8CE411F271654EE00D51DBD /* Holistico_DetallesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holistico_DetallesViewController.swift; sourceTree = "<group>"; };
+		B8CE4121271654FC00D51DBD /* Holistico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holistico.swift; sourceTree = "<group>"; };
+		B8CE4125271658FA00D51DBD /* Acompa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acompa.swift; sourceTree = "<group>"; };
+		B8CE412727165A4600D51DBD /* Acompa_DetallesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acompa_DetallesViewController.swift; sourceTree = "<group>"; };
 		F8ED89E96D77C588FB79D4B8 /* Pods_ProyectoIntegracion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoIntegracion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +162,11 @@
 				B8BBC7DE27126FD10042B08A /* AdminCambiosViewController.swift */,
 				B8BBC7E02712732B0042B08A /* TanatolCambioViewController.swift */,
 				B8BBC7E2271280760042B08A /* UsuarioCambioViewController.swift */,
+				B8BBC7E4271297DD0042B08A /* VistaSesionViewController.swift */,
+				B8BBC7E627129AD80042B08A /* CambioSesionViewController.swift */,
+				B8CE411B271650CE00D51DBD /* CETAC_DetallesViewController.swift */,
+				B8CE411F271654EE00D51DBD /* Holistico_DetallesViewController.swift */,
+				B8CE412727165A4600D51DBD /* Acompa_DetallesViewController.swift */,
 			);
 			path = Controladores;
 			sourceTree = "<group>";
@@ -154,6 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				B8BBC7D927124CC60042B08A /* Perfil.swift */,
+				B8CE411D2716513C00D51DBD /* Informacion.swift */,
+				B8CE4121271654FC00D51DBD /* Holistico.swift */,
+				B8CE4125271658FA00D51DBD /* Acompa.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -276,8 +300,12 @@
 				B80F0F08270FEA650013685A /* CETACTableViewController.swift in Sources */,
 				B80F0EF7270FCBF20013685A /* ViewController.swift in Sources */,
 				B80F0F10270FF4720013685A /* ContactosTableViewController.swift in Sources */,
+				B8CE4120271654EE00D51DBD /* Holistico_DetallesViewController.swift in Sources */,
+				B8CE4126271658FA00D51DBD /* Acompa.swift in Sources */,
 				B80F0EF3270FCBF10013685A /* AppDelegate.swift in Sources */,
 				B80F0F14270FF7060013685A /* SesionesTableViewController.swift in Sources */,
+				B8CE411E2716513C00D51DBD /* Informacion.swift in Sources */,
+				B8BBC7E5271297DD0042B08A /* VistaSesionViewController.swift in Sources */,
 				B80F0EF5270FCBF20013685A /* SceneDelegate.swift in Sources */,
 				B8CDEDCE27120F4800AD7DC1 /* SesionViewController.swift in Sources */,
 				B8BBC7E12712732B0042B08A /* TanatolCambioViewController.swift in Sources */,
@@ -290,8 +318,12 @@
 				B8CDEDCC27120D9E00AD7DC1 /* MotivoPickerView.swift in Sources */,
 				B80F0F0E270FEAB40013685A /* AcompanamientoTableViewController.swift in Sources */,
 				B80F0F0C270FEAA20013685A /* AlternativasTableViewController.swift in Sources */,
+				B8CE4122271654FC00D51DBD /* Holistico.swift in Sources */,
 				B8BBC7DF27126FD10042B08A /* AdminCambiosViewController.swift in Sources */,
+				B8CE412827165A4600D51DBD /* Acompa_DetallesViewController.swift in Sources */,
+				B8CE411C271650CE00D51DBD /* CETAC_DetallesViewController.swift in Sources */,
 				B80F0F12270FF6DC0013685A /* ExpedienteTableViewController.swift in Sources */,
+				B8BBC7E727129AD80042B08A /* CambioSesionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

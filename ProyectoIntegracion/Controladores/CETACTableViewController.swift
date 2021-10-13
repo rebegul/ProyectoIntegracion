@@ -8,7 +8,7 @@
 import UIKit
 
 class CETACTableViewController: UITableViewController {
-    let datos = ["Misión", "Visión", "Valores", "Objetivos"]
+    let datos = Informacion.listaInformacion()
     
     override func viewDidLoad() {
         
@@ -42,12 +42,20 @@ class CETACTableViewController: UITableViewController {
         //let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = datos[indexPath.row]
+        cell.textLabel?.text = datos[indexPath.row].nombre
         //cell.textLabel?.text = contacts[indexPath.row].fullname
 
         return cell
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let siguiente = segue.destination as! CETAC_DetallesViewController
+        let indice = self.tableView.indexPathForSelectedRow?.row
+        siguiente.informacion = datos[indice!]
+    }
 
     /*
     // Override to support conditional editing of the table view.

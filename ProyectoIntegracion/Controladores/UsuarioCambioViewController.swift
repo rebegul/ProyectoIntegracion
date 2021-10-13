@@ -15,8 +15,8 @@ class UsuarioCambioViewController: UIViewController {
 
     @IBOutlet weak var CambioNomU: UITextField!
     
-    @IBOutlet weak var CambioContraU: UITextField!
     
+    @IBOutlet weak var CambioContraU: UITextField!
     
     @IBOutlet weak var CambioCorrU: UITextField!
     
@@ -28,10 +28,10 @@ class UsuarioCambioViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents{
-                    let hols = ("\(document.documentID)")
+                    let hola = ("\(document.documentID)")
                     
                     let cambiar = Firestore.firestore().collection("Usuario")
-                    cambiar.document(hols).setData(["Contraseña":self.CambioContraU.text ?? "", "Correo":self.CambioCorrU.text ?? "", "Nombre":self.CambioNomU.text ?? ""])
+                    cambiar.document(hola).setData(["Contraseña":self.CambioContraU.text ?? "", "Correo":self.CambioCorrU.text ?? "", "Nombre":self.CambioNomU.text ?? ""])
                     
             
                 }

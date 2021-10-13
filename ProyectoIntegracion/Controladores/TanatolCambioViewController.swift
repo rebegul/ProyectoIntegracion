@@ -14,6 +14,7 @@ class TanatolCambioViewController: UIViewController {
     let db = Firestore.firestore()
     @IBOutlet weak var CambioNombreTan: UITextField!
     
+    @IBOutlet weak var CambC: UITextField!
     
     @IBOutlet weak var CambioContraTan: UILabel!
     @IBOutlet weak var CambioCorreoTan: UITextField!
@@ -28,7 +29,7 @@ class TanatolCambioViewController: UIViewController {
                     let hols = ("\(document.documentID)")
                     
                     let cambiar = Firestore.firestore().collection("Tanatologos")
-                    cambiar.document(hols).setData(["Contraseña":self.CambioContraTan.text ?? "", "Correo":self.CambioCorreoTan.text ?? "", "Nombre":self.CambioNombreTan.text ?? ""])
+                    cambiar.document(hols).setData(["Contraseña":self.CambC.text ?? "", "Correo":self.CambioCorreoTan.text ?? "", "Nombre":self.CambioNombreTan.text ?? ""])
                     
             
                 }
