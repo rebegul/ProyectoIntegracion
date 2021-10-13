@@ -9,10 +9,12 @@ import UIKit
 
 class AlternativasTableViewController: UITableViewController {
     
-    let datos = ["Flores de Bach", "Brisas Ambientales"]
+    let datos = Alternativas.listaAlternativas()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Herramientas Alternativas"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,13 +39,20 @@ class AlternativasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alternativas", for: indexPath)
         
-        cell.textLabel?.text = datos[indexPath.row]
+        cell.textLabel?.text = datos[indexPath.row].nombre
 
         // Configure the cell...
 
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let siguiente = segue.destination as! Alternativas_DetallesViewController
+        let indice = self.tableView.indexPathForSelectedRow?.row
+        siguiente.alternativas = datos[indice!]
+    }
 
     /*
     // Override to support conditional editing of the table view.
