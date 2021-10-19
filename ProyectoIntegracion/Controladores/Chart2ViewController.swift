@@ -17,6 +17,12 @@ class Chart2ViewController: UIViewController {
     
     let db = Firestore.firestore()
     
+    var datos = [0,0,0]
+    var tops = [Top]()
+    var motivos = [Top]()
+    var intervenciiones = [Top] ()
+    var cuota = 0.0
+    
     /*
     func fetchTopMotivos(completion: @escaping (Result<[(key:String, value:Int)], Error>)-> Void){
         var usuarios : [String:Int] = [:]
@@ -26,7 +32,7 @@ class Chart2ViewController: UIViewController {
                     completion(.failure(err))
                 } else {
                     for document in querySnapshot!.documents {
-                        var m = Barra(aDoc: document)
+                        var m = SesionViewController(aDoc: document)
                         let motivoExist = usuarios[m.Motivo] != nil
                         if motivoExist{
                             usuarios[m.Motivo]! += 1
@@ -39,8 +45,11 @@ class Chart2ViewController: UIViewController {
                     completion(.success(retDic))
                 }
             }
-        }
-    */
+        }*/
+    
+    
+    
+    
     
     lazy var sesionesChart:BarChartView = {
         let ChartView = BarChartView()
@@ -62,32 +71,114 @@ class Chart2ViewController: UIViewController {
     }
     
     func sesionesChartActualiza(){
-        let punto1 = BarChartDataEntry(x: 1, y: 5)
-        let punto2 = BarChartDataEntry(x: 2, y: 8)
-        let punto3 = BarChartDataEntry(x: 3, y: 1)
-        let punto4 = BarChartDataEntry(x: 4, y: 10)
-        var sesionesArreglo = [BarChartDataEntry]()
-        sesionesArreglo.append(punto1)
-        sesionesArreglo.append(punto2)
-        sesionesArreglo.append(punto3)
-        sesionesArreglo.append(punto4)
         
-        var sesionesDataSet = BarChartDataSet(entries: sesionesArreglo)
-        var data = BarChartData(dataSet: sesionesDataSet)
-        sesionesChart.data = data
-        sesionesChart.chartDescription?.text = "Sesiones por usuario"
-        sesionesChart.notifyDataSetChanged()
         
-    }
+        db.collection("Sesiones").whereField("Cuota", isEqualTo: 100)
+            .getDocuments() { [self] (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        
+                        let lect = document.data().count
+                        print(lect)
+                        
+                        db.collection("Sesiones").whereField("Cuota", isEqualTo: 150)
+                            .getDocuments() { [self] (querySnapshot, err) in
+                                if let err = err {
+                                    print("Error getting documents: \(err)")
+                                } else {
+                                    for document in querySnapshot!.documents {
+                                        
+                                        let vid = document.data().count
+                                        print(vid)
+                                        
+                                        
+                                        db.collection("Sesiones").whereField("Cuota", isEqualTo: 200)
+                                            .getDocuments() { [self] (querySnapshot, err) in
+                                                if let err = err {
+                                                    print("Error getting documents: \(err)")
+                                                } else {
+                                                    for document in querySnapshot!.documents {
+                                                        
+                                                        let dia = document.data().count
+                                                        print(dia)
+                                                        
+                                                        
+                                                        db.collection("Sesiones").whereField("Cuota", isEqualTo: 20)
+                                                            .getDocuments() { [self] (querySnapshot, err) in
+                                                                if let err = err {
+                                                                    print("Error getting documents: \(err)")
+                                                                } else {
+                                                                    for document in querySnapshot!.documents {
+                                                                        
+                                                                        let info = document.data().count
+                                                                        print(info)
+                                                                        
+                                                                        
+                                                                        
+                                                                       
+                                                                                        
+                                                                        
+                                                                                       
+                                                                            let punto1 = BarChartDataEntry(x: 1, y: Double(lect)) //dialogo
+                                                                            let punto2 = BarChartDataEntry(x: 2, y: Double(vid)) //infografia
+                                                                            let punto3 = BarChartDataEntry(x: 3, y: Double(dia)) //meditacion
+                                                                            let punto4 = BarChartDataEntry(x: 4, y: Double(info))//encuadre
+                                                                                                        
+                                                                                            
+                                                                                                        var sesionesArreglo = [BarChartDataEntry]()
+                                                                                                        sesionesArreglo.append(punto1)
+                                                                                                        sesionesArreglo.append(punto2)
+                                                                                                        sesionesArreglo.append(punto3)
+                                                                                                        sesionesArreglo.append(punto4)
+                                                                                                       
+                                                                                                        
+                                                                                                        
+                                                                                                        var sesionesDataSet = BarChartDataSet(entries: sesionesArreglo)
+                                                                                                        var data = BarChartData(dataSet: sesionesDataSet)
+                                                                                                        sesionesChart.data = data
+                                                                                                        sesionesChart.chartDescription?.text = "Cuota"
+                                                                                                        sesionesChart.notifyDataSetChanged()
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                              
+                                                                                        
+                                                                             
+                                                                        
+                                                                    }
+                                                                }
+                                                            }
+                                                        
+                                                    }
+                                                }
+                                                
+                                            }
+                                        
+                                       
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    }
+                                    
+                                }
+                                
+                            }
+                        
+                        
+                    }
+                }
+        }
+        
+        
+        
+            
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        }
 
 }

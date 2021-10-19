@@ -17,20 +17,28 @@ class Chart1ViewController: UIViewController {
     let db = Firestore.firestore()
     //var ref: DatabaseReference!
 
-
+/*
     @IBAction func botonExtra(_ sender: Any) {
         
-        db.collection("Sesiones").whereField("Motivo", isEqualTo: true)
+        db.collection("Sesiones").whereField("Cuota", isEqualTo: 100)
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
+                        
+                        let resp = document.data().count
+                        print(resp)
+                        
+                        
                     }
                 }
         }
-    }
+        
+        
+        
+        
+    }*/
     
     
     
@@ -57,9 +65,80 @@ class Chart1ViewController: UIViewController {
     
     func pieChartUpdate () {
         
-        let entry1 = PieChartDataEntry(value: 12, label: "Tanatologo 1")
-        let entry2 = PieChartDataEntry(value: 15, label: "Tanatologo 2")
-        let entry3 = PieChartDataEntry(value: 18, label: "Tanatologo 3")
+        db.collection("Sesiones").whereField("Tanatologo", isEqualTo: "Ian Sánchez")
+            .getDocuments() { [self] (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        
+                        let resp = document.data().count
+                        print(resp)
+                        
+                        
+                        db.collection("Sesiones").whereField("Tanatologo", isEqualTo: "Rebeca Guevara")
+                            .getDocuments() { [self] (querySnapshot, err) in
+                                if let err = err {
+                                    print("Error getting documents: \(err)")
+                                } else {
+                                    for document in querySnapshot!.documents {
+                                        
+                                        let reb = document.data().count
+                                        print(reb)
+                                        
+                                        
+                                        db.collection("Sesiones").whereField("Tanatologo", isEqualTo: "Marcia Lechuga")
+                                            .getDocuments() { [self] (querySnapshot, err) in
+                                                if let err = err {
+                                                    print("Error getting documents: \(err)")
+                                                } else {
+                                                    for document in querySnapshot!.documents {
+                                                        
+                                                        let mar = document.data().count
+                                                        print(mar)
+                                                        
+                                                        
+                                                        let entry1 = PieChartDataEntry(value: Double(reb), label: "Tanatologo Rebeca")
+                                                        let entry2 = PieChartDataEntry(value: Double(mar), label: "Tanatologo Marcia")
+                                                        let entry3 = PieChartDataEntry(value: Double(resp), label: "Tanatologo Ian")
+                                                        let dataSet = PieChartDataSet(entries: [entry1, entry2,entry3], label: "Usuarios atendidos")
+                                                        
+                                                        dataSet.colors = ChartColorTemplates.vordiplom()
+                                                        
+                                                        let data = PieChartData(dataSet: dataSet)
+                                                        
+                                                        pieChart.data = data
+                                                        
+                                                        pieChart.chartDescription?.text = "uSUARIOS ATENDIDOS"
+                                                        
+                                                        pieChart.holeColor = UIColor.clear
+                                                        
+                                                        pieChart.chartDescription?.textColor = UIColor.blue
+                                                        
+                                                        pieChart.legend.textColor = UIColor.blue
+                                                        
+                                                        pieChart.notifyDataSetChanged()
+                                                        
+                                                        
+                                                        
+                                                    }
+                                                }
+                                            }
+                                        
+                                        
+                                        
+                                    }
+                                }
+                            }
+                        
+                        
+                    }
+                }
+        }
+        /*
+        let entry1 = PieChartDataEntry(value: 9, label: "Tanatologo Rebeca")
+        let entry2 = PieChartDataEntry(value: 9, label: "Tanatologo Marcia")
+        let entry3 = PieChartDataEntry(value: 8, label: "Tanatologo Ian")
         let dataSet = PieChartDataSet(entries: [entry1, entry2,entry3], label: "Usuarios atendidos")
         
         dataSet.colors = ChartColorTemplates.joyful()
@@ -76,7 +155,7 @@ class Chart1ViewController: UIViewController {
         
         pieChart.legend.textColor = UIColor.blue
         
-        pieChart.notifyDataSetChanged()
+        pieChart.notifyDataSetChanged()*/
     }
     
     

@@ -2432,11 +2432,11 @@ EENvbnRyYXNlw7FhA
             <objects>
                 <viewController id="qwk-jt-NMZ" customClass="Chart1ViewController" customModule="ProyectoIntegracion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oPm-Sz-KkI">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCb-ge-9QA">
-                                <rect key="frame" x="115" y="231" width="529" height="530"/>
+                                <rect key="frame" x="20" y="100" width="664" height="661"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
@@ -2444,9 +2444,6 @@ EENvbnRyYXNlw7FhA
                                 <rect key="frame" x="284" y="837" width="137" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="botonExtra:" destination="qwk-jt-NMZ" eventType="touchUpInside" id="7jb-0R-Hy9"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n8G-CR-z5l"/>
@@ -3544,7 +3541,7 @@ EFNlc2lvbmVzA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIn-yZ-bDg">
-                                <rect key="frame" x="181" y="332" width="331" height="336"/>
+                                <rect key="frame" x="20" y="184" width="664" height="641"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
@@ -3561,16 +3558,16 @@ EFNlc2lvbmVzA
             </objects>
             <point key="canvasLocation" x="2941.4814814814813" y="92.777777777777771"/>
         </scene>
-        <!--View Controller-->
+        <!--Chart3 View Controller-->
         <scene sceneID="AnQ-Kf-AdI">
             <objects>
-                <viewController id="HP9-rc-UXn" sceneMemberID="viewController">
+                <viewController id="HP9-rc-UXn" customClass="Chart3ViewController" customModule="ProyectoIntegracion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fJU-yx-k1p">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSM-wR-mXJ">
-                                <rect key="frame" x="168" y="302" width="368" height="363"/>
+                                <rect key="frame" x="20" y="173" width="664" height="631"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
@@ -3579,6 +3576,9 @@ EFNlc2lvbmVzA
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ny0-Sf-3rm"/>
+                    <connections>
+                        <outlet property="Pie" destination="RSM-wR-mXJ" id="fJ2-t1-SQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gN-i9-GvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
