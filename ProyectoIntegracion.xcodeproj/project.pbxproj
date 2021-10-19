@@ -30,6 +30,9 @@
 		B8BBC7E3271280760042B08A /* UsuarioCambioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7E2271280760042B08A /* UsuarioCambioViewController.swift */; };
 		B8BBC7E5271297DD0042B08A /* VistaSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7E4271297DD0042B08A /* VistaSesionViewController.swift */; };
 		B8BBC7E727129AD80042B08A /* CambioSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BBC7E627129AD80042B08A /* CambioSesionViewController.swift */; };
+		B8C14D77271E50DC0008B350 /* Chart2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D76271E50DC0008B350 /* Chart2ViewController.swift */; };
+		B8C14D79271E6B430008B350 /* Chart3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D78271E6B430008B350 /* Chart3ViewController.swift */; };
+		B8CB4153271E39260092FD89 /* Chart1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB4152271E39260092FD89 /* Chart1ViewController.swift */; };
 		B8CDEDCC27120D9E00AD7DC1 /* MotivoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDEDCB27120D9E00AD7DC1 /* MotivoPickerView.swift */; };
 		B8CDEDCE27120F4800AD7DC1 /* SesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDEDCD27120F4800AD7DC1 /* SesionViewController.swift */; };
 		B8CDEDD0271211E800AD7DC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8CDEDCF271211E800AD7DC1 /* GoogleService-Info.plist */; };
@@ -70,6 +73,9 @@
 		B8BBC7E2271280760042B08A /* UsuarioCambioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioCambioViewController.swift; sourceTree = "<group>"; };
 		B8BBC7E4271297DD0042B08A /* VistaSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaSesionViewController.swift; sourceTree = "<group>"; };
 		B8BBC7E627129AD80042B08A /* CambioSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambioSesionViewController.swift; sourceTree = "<group>"; };
+		B8C14D76271E50DC0008B350 /* Chart2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart2ViewController.swift; sourceTree = "<group>"; };
+		B8C14D78271E6B430008B350 /* Chart3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart3ViewController.swift; sourceTree = "<group>"; };
+		B8CB4152271E39260092FD89 /* Chart1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart1ViewController.swift; sourceTree = "<group>"; };
 		B8CDEDCB27120D9E00AD7DC1 /* MotivoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivoPickerView.swift; sourceTree = "<group>"; };
 		B8CDEDCD27120F4800AD7DC1 /* SesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionViewController.swift; sourceTree = "<group>"; };
 		B8CDEDCF271211E800AD7DC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -172,6 +178,9 @@
 				B8CE411F271654EE00D51DBD /* Holistico_DetallesViewController.swift */,
 				B8CE412727165A4600D51DBD /* Acompa_DetallesViewController.swift */,
 				B8CE412B27165C6A00D51DBD /* Alternativas_DetallesViewController.swift */,
+				B8CB4152271E39260092FD89 /* Chart1ViewController.swift */,
+				B8C14D76271E50DC0008B350 /* Chart2ViewController.swift */,
+				B8C14D78271E6B430008B350 /* Chart3ViewController.swift */,
 			);
 			path = Controladores;
 			sourceTree = "<group>";
@@ -312,12 +321,14 @@
 				B80F0F14270FF7060013685A /* SesionesTableViewController.swift in Sources */,
 				B8CE412A27165BD300D51DBD /* Alternativas.swift in Sources */,
 				B8CE411E2716513C00D51DBD /* Informacion.swift in Sources */,
+				B8C14D77271E50DC0008B350 /* Chart2ViewController.swift in Sources */,
 				B8BBC7E5271297DD0042B08A /* VistaSesionViewController.swift in Sources */,
 				B80F0EF5270FCBF20013685A /* SceneDelegate.swift in Sources */,
 				B8CDEDCE27120F4800AD7DC1 /* SesionViewController.swift in Sources */,
 				B8BBC7E12712732B0042B08A /* TanatolCambioViewController.swift in Sources */,
 				B8BBC7E3271280760042B08A /* UsuarioCambioViewController.swift in Sources */,
 				B80F0F18271001B30013685A /* EncuadreTableViewController.swift in Sources */,
+				B8CB4153271E39260092FD89 /* Chart1ViewController.swift in Sources */,
 				B82205B52712350C00095673 /* RegistraViewController.swift in Sources */,
 				B8BBC7DA27124CC60042B08A /* Perfil.swift in Sources */,
 				B8BBC7D7271246810042B08A /* PerfilViewController.swift in Sources */,
@@ -326,6 +337,7 @@
 				B80F0F0E270FEAB40013685A /* AcompanamientoTableViewController.swift in Sources */,
 				B80F0F0C270FEAA20013685A /* AlternativasTableViewController.swift in Sources */,
 				B8CE4122271654FC00D51DBD /* Holistico.swift in Sources */,
+				B8C14D79271E6B430008B350 /* Chart3ViewController.swift in Sources */,
 				B8BBC7DF27126FD10042B08A /* AdminCambiosViewController.swift in Sources */,
 				B8CE412827165A4600D51DBD /* Acompa_DetallesViewController.swift in Sources */,
 				B8CE412C27165C6A00D51DBD /* Alternativas_DetallesViewController.swift in Sources */,
