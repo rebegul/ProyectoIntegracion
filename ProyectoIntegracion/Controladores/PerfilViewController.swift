@@ -34,6 +34,7 @@ class PerfilViewController: UIViewController {
                 for document in querySnapshot!.documents{
                     let hols = ("\(document.data())")
                     self.Role.text = hols
+                    print(hols)
                     
             
                 }

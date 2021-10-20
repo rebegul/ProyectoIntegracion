@@ -65,9 +65,10 @@ class Chart1ViewController: UIViewController {
     
     //var resp:Int = 0
     
-    func recuperardatos (nombre: String, completion: @escaping (Result<Int, Error>) -> Void) {
+    func recuperardatos (nombre: String, completion: @escaping (Result<String, Error>) -> Void) {
         //var cuantos: String
-        var resp:Int = 1
+        //var resp:Int = 0
+        var tan: String = nombre
         
         db.collection("Sesiones").whereField("Tanatologo", isEqualTo: nombre)
             .getDocuments() { [self] (querySnapshot, err) in
@@ -77,25 +78,20 @@ class Chart1ViewController: UIViewController {
                 } else {
                     
                     for document in querySnapshot!.documents {
-                        
-                        if resp > 0{
-                            resp += 1
+                        var t = tan
+                        tan.append(t)
+                       
                         }
-                        //resp = resp+1
-                        //let resp = document.data().count
-                        //let resp = document.data().count
-                        //print(resp)
-                        //print(resp)
-                        //completion(.success(resp))
+                      
                     }
-                    let maybe = resp
-                    completion(.success(maybe))
+                    //let maybe = resp
+                    completion(.success(tan))
                 
                 }
                 
         }
                 
-    }
+    
     
     /*
     func llamadaBD () {
@@ -111,108 +107,139 @@ class Chart1ViewController: UIViewController {
     }
     */
     
-    var Tan:Int = 0
+    var ias:Int = 0
+    var mal:Int = 0
+    var reg:Int = 0
+    
+    var contador1:Int = 0
     
     func pieChartUpdate () {
+      
         
-       
         
-        recuperardatos(nombre: "Ian Sánchez"){
-            
-            
+        
+        let ian = recuperardatos(nombre: "Ian Sánchez"){ [self]
             (resultado) in
-            //resultado : [String:Int] = [:]
+            
+            
             switch resultado{
-            case .success(let exito):print(resultado)
+            case .success(let exito):
+                self.ias = exito.count
+                
+                let marcia = recuperardatos(nombre: "Marcia Lechuga"){
+                    (resultado) in
+                    
+                    
+                    switch resultado{
+                    case .success(let exito):
+                        self.mal = exito.count
+                        
+                        let rebeca = recuperardatos(nombre: "Rebeca Guevara"){
+                            (resultado) in
+                            
+                            
+                            switch resultado{
+                            case .success(let exito):
+                                self.reg = exito.count
+                                print(ias)
+                                print(reg)
+                                print(mal)
+                                
+                                let entry1 = PieChartDataEntry(value: Double(reg), label:"Tanatologo Rebeca")
+                                            let entry2 = PieChartDataEntry(value: Double(mal), label: "Tanatologo Marcia")
+                                            let entry3 = PieChartDataEntry(value: Double(ias), label: "Tanatologo Ian")
+                                            let dataSet = PieChartDataSet(entries: [entry1, entry2,entry3], label: "Usuarios atendidos")
+                                                                                
+                                      dataSet.colors = ChartColorTemplates.vordiplom()
+                                                                                
+                                    let data = PieChartData(dataSet: dataSet)
+                                                                                
+                                    pieChart.data = data
+                                                                                
+                                    pieChart.chartDescription?.text = "Usuarios"
+                                                                                
+                                    pieChart.holeColor = UIColor.clear
+                                                                                
+                                    pieChart.chartDescription?.textColor = UIColor.blue
+                                                                                
+                                    pieChart.legend.textColor = UIColor.blue
+                                                                                
+                                    pieChart.notifyDataSetChanged()
+                                
+                            case .failure(let error):print(error)
+                            }
+                            
+                        }
+                    case .failure(let error):print(error)
+                    }
+                    
+                }
             case .failure(let error):print(error)
             }
-            
-           
             
         }
         
+        
         /*
-        recuperardatos(nombre: "Marcia Lechuga"){
+        let marcia = recuperardatos(nombre: "Marcia Lechuga"){ [self]
             (resultado) in
+            
+            
             switch resultado{
-            case .success(let exito):print(exito)
+            case .success(let exito):
+                exito = exito.count
+                if exito > 0 {
+                    for cuenta in exito{
+                        print("no")
+                        self.contador1 = self.contador1+1
+                        print(self.contador1)
+                    }
+                }
             case .failure(let error):print(error)
             }
             
-        }*/
+        }
         
+        let rebeca = recuperardatos(nombre: "Rebeca Guevara"){
+            (resultado) in
+            
+            
+            switch resultado{
+            case .success(let exito):
+                self.reg = exito.count
+            case .failure(let error):print(error)
+            }
+            
+        }
+        
+        print(ias)
+        print(reg)
+        print(mal)
+                       */
         /*
-        
-        db.collection("Sesiones").whereField("Tanatologo", isEqualTo: "Ian Sánchez")
-            .getDocuments() { [self] (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        
-                        let resp = document.data().count
-                        print(resp)
-                        
-                        
-                        db.collection("Sesiones").whereField("Tanatologo", isEqualTo: "Rebeca Guevara")
-                            .getDocuments() { [self] (querySnapshot, err) in
-                                if let err = err {
-                                    print("Error getting documents: \(err)")
-                                } else {
-                                    for document in querySnapshot!.documents {
-                                        
-                                        let reb = document.data().count
-                                        print(reb)
-                                        
-                                        
-                                        db.collection("Sesiones").whereField("Tanatologo", isEqualTo: "Marcia Lechuga")
-                                            .getDocuments() { [self] (querySnapshot, err) in
-                                                if let err = err {
-                                                    print("Error getting documents: \(err)")
-                                                } else {
-                                                    for document in querySnapshot!.documents {
-                                                        
-                                                        let mar = document.data().count
-                                                        print(mar)
-                                                        */
-                                                        
-                    let entry1 = PieChartDataEntry(value: 1, label: "Tanatologo Rebeca")
-                    let entry2 = PieChartDataEntry(value: 2, label: "Tanatologo Marcia")
-                    let entry3 = PieChartDataEntry(value: 3, label: "Tanatologo Ian")
+        let entry1 = PieChartDataEntry(value: Double(reg), label:"Tanatologo Rebeca")
+                    let entry2 = PieChartDataEntry(value: Double(mal), label: "Tanatologo Marcia")
+                    let entry3 = PieChartDataEntry(value: Double(ias), label: "Tanatologo Ian")
                     let dataSet = PieChartDataSet(entries: [entry1, entry2,entry3], label: "Usuarios atendidos")
                                                         
               dataSet.colors = ChartColorTemplates.vordiplom()
                                                         
-                                                        let data = PieChartData(dataSet: dataSet)
+            let data = PieChartData(dataSet: dataSet)
                                                         
-                                                        pieChart.data = data
+            pieChart.data = data
                                                         
-                                                        pieChart.chartDescription?.text = "uSUARIOS ATENDIDOS"
+            pieChart.chartDescription?.text = "Usuarios"
                                                         
-                                                        pieChart.holeColor = UIColor.clear
+            pieChart.holeColor = UIColor.clear
                                                         
-                                                        pieChart.chartDescription?.textColor = UIColor.blue
+            pieChart.chartDescription?.textColor = UIColor.blue
                                                         
-                                                        pieChart.legend.textColor = UIColor.blue
+            pieChart.legend.textColor = UIColor.blue
                                                         
-                                                        pieChart.notifyDataSetChanged()
+            pieChart.notifyDataSetChanged()
+                                                       */
                                                         
-                                                        
-                                                /*
-                                                    }
-                                                }
-                                            }
-                                        
-                                        
-                                        
-                                    }
-                                }
-                            }
-                        
-                        
-                    }
-                }
-        }*/
+                                              
         /*
         let entry1 = PieChartDataEntry(value: 9, label: "Tanatologo Rebeca")
         let entry2 = PieChartDataEntry(value: 9, label: "Tanatologo Marcia")
@@ -234,7 +261,7 @@ class Chart1ViewController: UIViewController {
         pieChart.legend.textColor = UIColor.blue
         
         pieChart.notifyDataSetChanged()*/
-    }
+    //}/*
     
     
     
@@ -245,8 +272,9 @@ class Chart1ViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view controller.*/
     }
-    */
+    
     
 }
+

@@ -76,16 +76,8 @@
                                             <segue destination="qs0-Wb-yVe" kind="presentation" modalPresentationStyle="fullScreen" id="WQk-jO-VnW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU4-SD-hb2">
-                                        <rect key="frame" x="102" y="250" width="240" height="293"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Cetac-boton" image="cetac"/>
-                                        <connections>
-                                            <segue destination="56t-YJ-QQQ" kind="show" id="8EZ-Pu-h6b"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-Dc-aiL">
-                                        <rect key="frame" x="102" y="608" width="250" height="303"/>
+                                        <rect key="frame" x="293" y="609" width="250" height="303"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Servicios-boton" image="hOLISTICOS"/>
                                         <connections>
@@ -93,7 +85,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f38-tR-6dx">
-                                        <rect key="frame" x="460" y="604" width="244" height="312"/>
+                                        <rect key="frame" x="550" y="602" width="244" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Tecnica-boton" image="tecnicas"/>
                                         <connections>
@@ -101,11 +93,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfa-5U-suv">
-                                        <rect key="frame" x="460" y="250" width="244" height="310"/>
+                                        <rect key="frame" x="41" y="602" width="244" height="310"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Acomp-boton" image="Acompañamiento"/>
                                         <connections>
                                             <segue destination="0O5-lw-nsQ" kind="show" id="WIr-aB-rTR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU4-SD-hb2">
+                                        <rect key="frame" x="303" y="266" width="240" height="293"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cetac-boton" image="cetac"/>
+                                        <connections>
+                                            <segue destination="56t-YJ-QQQ" kind="show" id="8EZ-Pu-h6b"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -221,31 +221,6 @@
                                         <rect key="frame" x="45" y="302" width="721" height="725"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9C-D1-urq">
-                                        <rect key="frame" x="209" y="613" width="399" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Registrate">
-                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="80m-Xa-Nqc" kind="presentation" modalPresentationStyle="fullScreen" id="r4w-TR-fB8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQw-bg-6nk">
-                                        <rect key="frame" x="209" y="752" width="399" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Ingresa">
-                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="S06-Ac-2xg" kind="presentation" modalPresentationStyle="fullScreen" id="2Fp-0X-FX5"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingresar a la Aplicación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIj-05-UK8">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,6 +233,18 @@
                                         <rect key="frame" x="80" y="8" width="651" height="424"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQw-bg-6nk">
+                                        <rect key="frame" x="223" y="597" width="399" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Ingresa">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="S06-Ac-2xg" kind="presentation" modalPresentationStyle="fullScreen" id="2Fp-0X-FX5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -426,7 +413,7 @@ EFNlc2lvbmVzA
                                         <color key="tintColor" name="AccentColor"/>
                                         <state key="normal" title="Administrador"/>
                                         <connections>
-                                            <segue destination="JO4-zP-XY1" kind="show" id="0y8-77-xIP"/>
+                                            <segue destination="QB7-VK-euE" kind="show" id="uD8-VC-AVB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dju-pk-EM4" userLabel="TanCambiar">
@@ -1309,16 +1296,8 @@ EEluZGljYWRvcmVzA
                                             <segue destination="9hw-6z-UUO" kind="presentation" modalPresentationStyle="fullScreen" id="ByT-uF-e38"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W32-5z-8MY">
-                                        <rect key="frame" x="102" y="250" width="250" height="310"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Cetac-boton" image="cetac"/>
-                                        <connections>
-                                            <segue destination="2Y3-Fu-ICg" kind="show" id="y0x-DJ-z9t"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJu-eQ-K3F">
-                                        <rect key="frame" x="102" y="608" width="250" height="303"/>
+                                        <rect key="frame" x="275" y="617" width="250" height="303"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Servicios-boton" image="hOLISTICOS"/>
                                         <connections>
@@ -1326,7 +1305,7 @@ EEluZGljYWRvcmVzA
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0b-14-y8d">
-                                        <rect key="frame" x="460" y="604" width="244" height="312"/>
+                                        <rect key="frame" x="533" y="608" width="244" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Tecnica-boton" image="tecnicas"/>
                                         <connections>
@@ -1334,7 +1313,7 @@ EEluZGljYWRvcmVzA
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzD-QC-kzC">
-                                        <rect key="frame" x="460" y="250" width="244" height="310"/>
+                                        <rect key="frame" x="22" y="613" width="244" height="310"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Acomp-boton" image="Acompañamiento"/>
                                         <connections>
@@ -1394,6 +1373,25 @@ EFNlc2lvbmVzA
                                         </state>
                                         <connections>
                                             <segue destination="Qbg-eh-pIF" kind="presentation" modalPresentationStyle="fullScreen" id="9vt-Q2-Czt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVZ-0N-Cqq">
+                                        <rect key="frame" x="489" y="380" width="203" height="97"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.42494074739999999" green="0.73536091969999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Agregar nuevo Tanatologo">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="80m-Xa-Nqc" kind="show" id="V45-qp-T42"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W32-5z-8MY">
+                                        <rect key="frame" x="189" y="240" width="250" height="310"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cetac-boton" image="cetac"/>
+                                        <connections>
+                                            <segue destination="2Y3-Fu-ICg" kind="show" id="y0x-DJ-z9t"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1625,7 +1623,7 @@ CDMX, Benito Juárez</string>
             <objects>
                 <viewController id="80m-Xa-Nqc" userLabel="Registro" customClass="RegistraViewController" customModule="ProyectoIntegracion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GYA-ct-fBU">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHp-fD-1KB">
@@ -1783,6 +1781,7 @@ EENvbnRyYXNlw7FhA
                             <constraint firstItem="HHp-fD-1KB" firstAttribute="top" secondItem="jzm-YY-JTC" secondAttribute="top" id="uyE-In-z0W"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rq2-sh-vGI"/>
                     <connections>
                         <outlet property="contrase" destination="M6I-7R-QNu" id="EKv-fo-Wzn"/>
                         <outlet property="correo" destination="DEc-ZD-kuR" id="xvm-TQ-mEo"/>
@@ -1791,7 +1790,7 @@ EENvbnRyYXNlw7FhA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgF-Wg-5iT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="940"/>
+            <point key="canvasLocation" x="544" y="3140"/>
         </scene>
         <!--Acompanamiento Table View Controller-->
         <scene sceneID="jcI-EP-eT7">
@@ -3541,7 +3540,43 @@ EFNlc2lvbmVzA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40S-hT-ZMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="93"/>
+            <point key="canvasLocation" x="2269" y="-671"/>
+        </scene>
+        <!--Antes Cambiar Admin View Controller-->
+        <scene sceneID="Mtp-zV-CLD">
+            <objects>
+                <viewController id="QB7-VK-euE" customClass="AntesCambiarAdminViewController" customModule="ProyectoIntegracion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4EA-z3-KzH">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-Mk-Kr5">
+                                <rect key="frame" x="104" y="127" width="496" height="634"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Reh-WG-CXh">
+                                <rect key="frame" x="305" y="863" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="JO4-zP-XY1" kind="show" id="EF6-cI-RgI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R6L-65-W7J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W2o-Cg-aXE"/>
+                    <connections>
+                        <outlet property="info" destination="c8o-Mk-Kr5" id="dmb-UV-Hoz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEj-gz-sU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2284.4444444444443" y="100.55555555555556"/>
         </scene>
         <!--Chart2 View Controller-->
         <scene sceneID="2Ga-3h-glp">
@@ -3844,19 +3879,19 @@ EFNlc2lvbmVzA
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="1lg-Ki-iFg"/>
-        <segue reference="dYm-Pd-d2C"/>
+        <segue reference="D88-dA-z3x"/>
         <segue reference="wnw-XQ-6Mm"/>
         <segue reference="oDb-5N-W3R"/>
-        <segue reference="iUV-kO-9dT"/>
+        <segue reference="9vt-Q2-Czt"/>
         <segue reference="6Vy-dC-Wvs"/>
         <segue reference="4HP-Ma-lKM"/>
         <segue reference="Gpn-lz-erg"/>
-        <segue reference="UVw-xC-KcC"/>
+        <segue reference="q2f-7y-Cay"/>
         <segue reference="2W7-sb-7nD"/>
-        <segue reference="9Q0-8H-cpO"/>
-        <segue reference="asN-zc-MfN"/>
+        <segue reference="0Le-Gx-pO1"/>
+        <segue reference="ByT-uF-e38"/>
         <segue reference="WQk-jO-VnW"/>
-        <segue reference="2Fp-0X-FX5"/>
+        <segue reference="WFZ-Zc-7PB"/>
         <segue reference="LLZ-Hb-wQa"/>
     </inferredMetricsTieBreakers>
     <resources>

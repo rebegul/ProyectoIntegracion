@@ -18,31 +18,33 @@ class Chart2ViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    
-    
-    /*
-    func fetchTopMotivos(completion: @escaping (Result<[(key:String, value:Int)], Error>)-> Void){
-        var usuarios : [String:Int] = [:]
-            db.collection("Sesiones").document("TPfPepPLOtvUX0f0oq61").collection("Motivo").getDocuments{ (querySnapshot, err) in
+    func recuperardatos (nombre: String, completion: @escaping (Result<String, Error>) -> Void) {
+        //var cuantos: String
+        //var resp:Int = 0
+        var tan: String = nombre
+        
+        db.collection("Sesiones").whereField("Intervencion", isEqualTo: nombre)
+            .getDocuments() { [self] (querySnapshot, err) in
                 if let err = err {
-                    print("Error getting document: \(err)")
-                    completion(.failure(err))
+                    print("Error getting documents: \(err)")
+                    completion (.failure(err))
                 } else {
+                    
                     for document in querySnapshot!.documents {
-                        var m = SesionViewController(aDoc: document)
-                        let motivoExist = usuarios[m.Motivo] != nil
-                        if motivoExist{
-                            usuarios[m.Motivo]! += 1
+                        var t = tan
+                        tan.append(t)
+                       
                         }
-                        else {
-                            usuarios[m.Motivo] = 1
-                        }
+                      
                     }
-                    let retDic = usuarios.sorted { $0.value > $1.value}
-                    completion(.success(retDic))
+                    //let maybe = resp
+                    completion(.success(tan))
+                
                 }
-            }
-        }*/
+                
+        }
+    
+    
     
     
     
@@ -66,64 +68,168 @@ class Chart2ViewController: UIViewController {
         //fetcher
         // Do any additional setup after loading the view.
     }
-    
+    var AcomIndi: Int = 0 //
+    var Tana: Int = 0 //
+    var Mind: Int = 0 //
+    var Cristal: Int = 0 //
+    var Reiki: Int = 0 //
+    var Brisas: Int = 0 //
+    var Logo: Int = 0 //
+    var Flores: Int = 0 //
+    var AcomGru: Int = 0 //
+    var Jade: Int = 0
     func sesionesChartActualiza(){
+      
+                     
+       recuperardatos(nombre: "Acompañamiento Individual"){ [self]
+            (resultado) in
+            
+            
+            switch resultado{
+            case .success(let exito):
+                self.AcomIndi = exito.count
+                print("Individual 1")
+                print(self.AcomIndi)
+            case .failure(let error):print(error)
+            }
+       }
         
+        recuperardatos(nombre: "Acompañamiento Grupal"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.AcomGru = exito.count
+                print("g")
+                 print(self.AcomGru)
+             case .failure(let error):print(error)
+             }
+        }
         
-        db.collection("Sesiones").whereField("Cuota", isEqualTo: 100)
-            .getDocuments() { [self] (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        
-                        let lect = document.data().count
-                        print(lect)
-                        
-                        db.collection("Sesiones").whereField("Cuota", isEqualTo: 150)
-                            .getDocuments() { [self] (querySnapshot, err) in
-                                if let err = err {
-                                    print("Error getting documents: \(err)")
-                                } else {
-                                    for document in querySnapshot!.documents {
-                                        
-                                        let vid = document.data().count
-                                        print(vid)
-                                        
-                                        
-                                        db.collection("Sesiones").whereField("Cuota", isEqualTo: 200)
-                                            .getDocuments() { [self] (querySnapshot, err) in
-                                                if let err = err {
-                                                    print("Error getting documents: \(err)")
-                                                } else {
-                                                    for document in querySnapshot!.documents {
-                                                        
-                                                        let dia = document.data().count
-                                                        print(dia)
-                                                        
-                                                        
-                                                        db.collection("Sesiones").whereField("Cuota", isEqualTo: 20)
-                                                            .getDocuments() { [self] (querySnapshot, err) in
-                                                                if let err = err {
-                                                                    print("Error getting documents: \(err)")
-                                                                } else {
-                                                                    for document in querySnapshot!.documents {
-                                                                        
-                                                                        let info = document.data().count
-                                                                        print(info)
-                                                                        
-                                                                            
-                                                                            let punto1 = BarChartDataEntry(x: 1, y: Double(lect)) //dialogo
-                                                                            let punto2 = BarChartDataEntry(x: 2, y: Double(vid)) //infografia
-                                                                            let punto3 = BarChartDataEntry(x: 3, y: Double(dia)) //meditacion
-                                                                            let punto4 = BarChartDataEntry(x: 4, y: Double(info))//encuadre
+            recuperardatos(nombre: "Tanatología"){ [self]
+                 (resultado) in
+                 
+                 
+                 switch resultado{
+                 case .success(let exito):
+                     self.Tana = exito.count
+                    print("Tanatologia")
+                     print(self.Tana)
+                    
+                 case .failure(let error):print(error)
+                 }
+            }
+        
+        recuperardatos(nombre: "Brisas ambientales"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.Brisas = exito.count
+                print("Brisas")
+                 print(self.Brisas)
+                
+             case .failure(let error):print(error)
+             }
+        }
+        recuperardatos(nombre: "Mindfulness"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.Mind = exito.count
+                print("mind")
+                 print(self.Mind)
+                
+             case .failure(let error):print(error)
+             }
+        }
+        
+        recuperardatos(nombre: "Cristaloterapia"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.Cristal = exito.count
+                print("cristal")
+                 print(self.Cristal)
+                
+             case .failure(let error):print(error)
+             }
+        }
+        
+        recuperardatos(nombre: "Reiki"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.Reiki = exito.count
+                print("reiki")
+                 print(self.Reiki)
+                
+             case .failure(let error):print(error)
+             }
+        }
+        
+        recuperardatos(nombre: "Logoterapia"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.Logo = exito.count
+                print("Logo")
+                 print(self.Logo)
+                
+             case .failure(let error):print(error)
+             }
+        }
+        
+        recuperardatos(nombre: "Flores de Bach"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.Flores = exito.count
+                print("flores")
+                 print(self.Flores)
+                
+             case .failure(let error):print(error)
+             }
+        }
+        
+        recuperardatos(nombre: "Cama termica de Jade"){ [self]
+             (resultado) in
+             
+             
+             switch resultado{
+             case .success(let exito):
+                 self.Jade = exito.count
+                print("Jade")
+                 print(self.Jade)
+                
+             case .failure(let error):print(error)
+             }
+        }
+        
+            //print(AcompamientoInd)
+                
+            let punto1 = BarChartDataEntry(x: 1, y: 1) //dialogo
+          let punto2 = BarChartDataEntry(x: 2, y: 2) //infografia
+            let punto3 = BarChartDataEntry(x: 3, y: 3) //meditacion
+           let punto4 = BarChartDataEntry(x: 4, y: 4)//encuadre
                                                                                                         
-                                                                                            
-                                                                            var sesionesArreglo = [BarChartDataEntry]()
-                                                                            sesionesArreglo.append(punto1)
-                                                                            sesionesArreglo.append(punto2)
-                                                                            sesionesArreglo.append(punto3)
-                                                                            sesionesArreglo.append(punto4)
+            var sesionesArreglo = [BarChartDataEntry]()
+            sesionesArreglo.append(punto1)
+            sesionesArreglo.append(punto2)
+            sesionesArreglo.append(punto3)
+             sesionesArreglo.append(punto4)
                                                                                                     
                                                                             var sesionesDataSet = BarChartDataSet(entries: sesionesArreglo)
                                                                             var data = BarChartData(dataSet: sesionesDataSet)
@@ -132,31 +238,13 @@ class Chart2ViewController: UIViewController {
                                                                                                         sesionesChart.notifyDataSetChanged()
                                                                                                         
                                                                                
-                                                                    }
-                                                                }
-                                                            }
+                                                               
                                                         
-                                                    }
-                                                }
-                                                
-                                            }
-
-                                    }
-                                    
-                                }
-                                
-                            }
-                        
-                        
-                    }
-                }
-        }
-        
-        
-        
-            
+                                                 
+                                  
 
 
         }
 
 }
+
