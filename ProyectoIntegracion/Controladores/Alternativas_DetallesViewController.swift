@@ -14,6 +14,7 @@ class Alternativas_DetallesViewController: UIViewController {
     @IBOutlet weak var nomAlt: UILabel!
     
     
+    @IBOutlet weak var imagen: UIImageView!
     @IBOutlet weak var descAlt: UILabel!
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class Alternativas_DetallesViewController: UIViewController {
         
         nomAlt.text = alternativas?.nombre
         descAlt.text = alternativas?.desc
+        imagen.image = UIImage(named: alternativas!.imagen)
     }
     
 

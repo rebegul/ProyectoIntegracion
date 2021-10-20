@@ -15,11 +15,13 @@ class Acompa_DetallesViewController: UIViewController {
     
     @IBOutlet weak var descAcompa: UILabel!
     
+    @IBOutlet weak var imagen: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nomAcompa.text = acompa?.nombre
         descAcompa.text = acompa?.desc
+        imagen.image = UIImage(named: acompa!.imagen)
 
         // Do any additional setup after loading the view.
     }

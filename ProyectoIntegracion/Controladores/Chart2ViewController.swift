@@ -2,7 +2,7 @@
 //  Chart2ViewController.swift
 //  ProyectoIntegracion
 //
-//  Created by Rebeca Guevara on 18/10/21.
+//  Created by Marcia Lechuga on 18/10/21.
 //
 
 import UIKit
@@ -11,17 +11,14 @@ import TinyConstraints
 import Firebase
 import FirebaseFirestore
 import Foundation
+
 class Chart2ViewController: UIViewController {
 
     @IBOutlet weak var Barra: UIView!
     
     let db = Firestore.firestore()
     
-    var datos = [0,0,0]
-    var tops = [Top]()
-    var motivos = [Top]()
-    var intervenciiones = [Top] ()
-    var cuota = 0.0
+    
     
     /*
     func fetchTopMotivos(completion: @escaping (Result<[(key:String, value:Int)], Error>)-> Void){
@@ -115,39 +112,26 @@ class Chart2ViewController: UIViewController {
                                                                         let info = document.data().count
                                                                         print(info)
                                                                         
-                                                                        
-                                                                        
-                                                                       
-                                                                                        
-                                                                        
-                                                                                       
+                                                                            
                                                                             let punto1 = BarChartDataEntry(x: 1, y: Double(lect)) //dialogo
                                                                             let punto2 = BarChartDataEntry(x: 2, y: Double(vid)) //infografia
                                                                             let punto3 = BarChartDataEntry(x: 3, y: Double(dia)) //meditacion
                                                                             let punto4 = BarChartDataEntry(x: 4, y: Double(info))//encuadre
                                                                                                         
                                                                                             
-                                                                                                        var sesionesArreglo = [BarChartDataEntry]()
-                                                                                                        sesionesArreglo.append(punto1)
-                                                                                                        sesionesArreglo.append(punto2)
-                                                                                                        sesionesArreglo.append(punto3)
-                                                                                                        sesionesArreglo.append(punto4)
-                                                                                                       
-                                                                                                        
-                                                                                                        
-                                                                                                        var sesionesDataSet = BarChartDataSet(entries: sesionesArreglo)
-                                                                                                        var data = BarChartData(dataSet: sesionesDataSet)
+                                                                            var sesionesArreglo = [BarChartDataEntry]()
+                                                                            sesionesArreglo.append(punto1)
+                                                                            sesionesArreglo.append(punto2)
+                                                                            sesionesArreglo.append(punto3)
+                                                                            sesionesArreglo.append(punto4)
+                                                                                                    
+                                                                            var sesionesDataSet = BarChartDataSet(entries: sesionesArreglo)
+                                                                            var data = BarChartData(dataSet: sesionesDataSet)
                                                                                                         sesionesChart.data = data
                                                                                                         sesionesChart.chartDescription?.text = "Cuota"
                                                                                                         sesionesChart.notifyDataSetChanged()
                                                                                                         
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                              
-                                                                                        
-                                                                             
-                                                                        
+                                                                               
                                                                     }
                                                                 }
                                                             }
@@ -156,13 +140,7 @@ class Chart2ViewController: UIViewController {
                                                 }
                                                 
                                             }
-                                        
-                                       
-                                        
-                                        
-                                        
-                                        
-                                        
+
                                     }
                                     
                                 }

@@ -14,12 +14,14 @@ class Holistico_DetallesViewController: UIViewController {
     @IBOutlet weak var nomHol: UILabel!
     
     
+    @IBOutlet weak var imagenH: UIImageView!
     @IBOutlet weak var descHol: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nomHol.text = holistico?.nombre
         descHol.text = holistico?.desc
+        imagenH.image = UIImage(named: holistico!.imagen)
 
         // Do any additional setup after loading the view.
     }

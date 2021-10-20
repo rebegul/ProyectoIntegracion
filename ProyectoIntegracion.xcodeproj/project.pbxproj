@@ -45,6 +45,7 @@
 		B8CE412827165A4600D51DBD /* Acompa_DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE412727165A4600D51DBD /* Acompa_DetallesViewController.swift */; };
 		B8CE412A27165BD300D51DBD /* Alternativas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE412927165BD300D51DBD /* Alternativas.swift */; };
 		B8CE412C27165C6A00D51DBD /* Alternativas_DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE412B27165C6A00D51DBD /* Alternativas_DetallesViewController.swift */; };
+		B8F18E83271FB70100C2482C /* Sesiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F18E82271FB70100C2482C /* Sesiones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		B8CE412727165A4600D51DBD /* Acompa_DetallesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acompa_DetallesViewController.swift; sourceTree = "<group>"; };
 		B8CE412927165BD300D51DBD /* Alternativas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alternativas.swift; sourceTree = "<group>"; };
 		B8CE412B27165C6A00D51DBD /* Alternativas_DetallesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alternativas_DetallesViewController.swift; sourceTree = "<group>"; };
+		B8F18E82271FB70100C2482C /* Sesiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesiones.swift; sourceTree = "<group>"; };
 		F8ED89E96D77C588FB79D4B8 /* Pods_ProyectoIntegracion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoIntegracion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 				B8CE4125271658FA00D51DBD /* Acompa.swift */,
 				B8CE412927165BD300D51DBD /* Alternativas.swift */,
 				B8C14D7A271E6E430008B350 /* Tops.swift */,
+				B8F18E82271FB70100C2482C /* Sesiones.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				B80F0F08270FEA650013685A /* CETACTableViewController.swift in Sources */,
 				B80F0EF7270FCBF20013685A /* ViewController.swift in Sources */,
+				B8F18E83271FB70100C2482C /* Sesiones.swift in Sources */,
 				B80F0F10270FF4720013685A /* ContactosTableViewController.swift in Sources */,
 				B8C14D7B271E6E430008B350 /* Tops.swift in Sources */,
 				B8CE4120271654EE00D51DBD /* Holistico_DetallesViewController.swift in Sources */,

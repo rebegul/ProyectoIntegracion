@@ -2,7 +2,7 @@
 //  Chart3ViewController.swift
 //  ProyectoIntegracion
 //
-//  Created by Rebeca Guevara on 18/10/21.
+//  Created by Ian Sanchez on 18/10/21.
 //
 
 
